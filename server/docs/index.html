@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/docs.css" />
+    <title>LWood Audio Catalog Generator</title>
+</head>
+
+<body class="p-2 bg-secondary text-primary">
+
+  <div class="container-lg  d-flex flex-column">
+  <header class="p-3 bg-dark text-white mb-3">
+    <div class="container">
+
+<div class="ac-logo-container  col-sm-2 float-start">
+    <img  class="ac-logo" src="images/lw-logo.svg" alt="Audio Catalog Genrator"/> 
+</div>
+<div class="col-sm-10 align-middle"><p class="h1 fw-bold">LWood Audio Catalog Creator</p> </div>
+<ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="index.html" class="nav-link px-2"><img src="images/overview.svg" alt="Overview" class="nav-image"/></a> </li>
+    <li class="nav-item"><a href="instructions.html" class="nav-link px-2"><img src="images/instructions.svg" alt="Instructions" class="nav-image"/></a></li>
+    <li class="nav-item"><a href="about.html" class="nav-link px-2"><img src="images/about.svg" alt="About" class="nav-image"/></a></li>
+    <li class="nav-item"><a href="developer.html" class="nav-link px-2"><img src="images/developer.svg" alt="Developer" class="nav-image"/></a></li>
+</ul> 
+
+
+        </div>
+</header>
+  <DIV class="MW-LG D-FLEX JUSTIFY-SELF-CENTER">
+    <div class="d-flex flex-row justify-between mb-0 pb-3 bg-dark text-white">
+      
+      <div class="col-sm-6" role="main" title="main">
+        <h1 text-center"">Documentation Overview</h1>
+        <p>Welcome to the Audio Catalog Generator. This simple to use generator will create an HTML page that will list, describe, and play your audio files. You can then simply copy and paste the public folder on any website as HTML files. Advanced users may use github to host your audio catalog for FREE.</p>
+        
+        <p>HThe HTML generator is SEO friendly,. That means google and other search engines will be able to find them, and you will get noticed. Those that produce musical content can provide a lower quality or excerpt of the actual music. Plus you can add links for where they can purchase it or get use rights.</p>
+        
+        <p>  Here your users can play the audio files.  Download the audio files. Bookmark, share and so on. This genrator requires no HTML or css knowledge. </p>
+        
+        <h2>What you  will need</h2>
+        <ul>
+        <li>text editor - Any will do.</li>
+        <li><a href="https://nodejs.org/en/download/">NodeJS</a> - No programming needed just needs to be installed to generate the files. Select version for your system (Windows, Linux, Mac)</li>
+        <li>Media Audio files such as mp3's, Wav, and so on.
+        <li>Cloud Drive, WebSite, or GitHub if you want to share your Audio Catalog with the world.</li>
+        </ul>
+        
+        <h2>Optional</h2>
+        <p>Html/Css editor. This is for those that are comfortable making such modifications. It is not needed if you are okay with the Audio Catalog layout & colors I provided.</p>
+        <p>GitHub account. This will allow you to dowload the entire project and host the html free for yourself</p>
+        <p>SSH or GPC configured and linked to your github account. This will will allow automatic updates and  uploads. This is very Advanced you may need help possibly. You still other options.</p>
+        
+         
+        
+        
+        </div>
+
+        
+        <h2>Quick Steps</h2>
+<ol>
+  <li><code>npm run start</code></li>
+  <li><a href="/templates" target="__blank">Go to http://localhost:5000/templates </a></li>
+  <li>Add media files and/or modify descriptor files</li>
+  <li>Repeat step 2 Templates until done.</li>
+  <li><a href="/api/import" target="__blank">Go to http://localhost:5000//api/import </a></li>
+  <li><a href="/make-html" target="__blank">Go to http://localhost:5000/make-html</a></li>
+  <li><a href="/make-html?save=true" target="__blank">Go to http://localhost:5000/make-html?save=true</a></li>
+  <li>Shut down this server. ctrl + c</li>
+  <li>Public/index.html is the  catalog</li>
+</ol>
+</div>
+</DIV>
+
+
+<div title="my footer" role="region">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-3 bg-dark text-white">
+        <ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="index.html" class="nav-link px-2"><img src="images/overview.svg" alt="Overview" class="nav-image"/></a> </li>
+    <li class="nav-item"><a href="instructions.html" class="nav-link px-2"><img src="images/instructions.svg" alt="Instructions" class="nav-image"/></a></li>
+    <li class="nav-item"><a href="about.html" class="nav-link px-2"><img src="images/about.svg" alt="About" class="nav-image"/></a></li>
+    <li class="nav-item"><a href="developer.html" class="nav-link px-2"><img src="images/developer.svg" alt="Developer" class="nav-image"/></a></li>
+</ul> 
+        <p class="col-md-4 mb-0 text-muted" style="float: start;">&copy; 2023 Audio Catalog Generator</p>
+        <p class="h5" style="float: end;">Powered by <a href="http://blindheroes.org/about-me/" target="__blank">Lewis Wood</a></p>
+    </footer>
+</div>
+
+
+
+<!-- <script src="/js/devops.js"></script></script> -->
+<script>
+    // const vConsole = DevOps;  // Debug Mod. Uncomment the  DevOps script tag above this onee
+    const vConsole = console; // Normal mode Be sure to comment out the DevOps Script line above this one.
+    
+
+
+const copyCodeAction = (id, img) => {
+    const code = document.getElementById(id);
+    if (code) {
+window.navigator.clipboard.writeText(code.innerText);
+// Let aria-live attribute catch button alt description change, then change it back 300ms later
+img.setAttribute("alt","Code Copied...");
+setTimeout(() => { img.setAttribute("alt", "Copy Code");}, 300);
+    }; // Do nothing if id is not found there was a boo boo
+
+}; // copyCodeAction
+
+const makeCodeButton = (id) => {
+const b = document.createElement("buttton");
+b.classList.add("code-button");
+const img = document.createElement("img");
+img.setAttribute("src",`images/copy.svg`);
+img.classList.add("code-img");
+b.append(img);
+img.setAttribute("alt", "Copy Code");
+img.setAttribute("aria-live", "polite");
+b.onclick = () => { copyCodeAction(id, img); {};}
+return b;
+}; // makeCodeButton
+
+const processCode = (code, newId) =>     {
+try {
+    const p = code.parentElement;
+    if (! code.id) code.id = newId; 
+    // vConsole.log(` Parent tag is ${p.tagName} : Code Id is ${code.id}`);
+    const btn = makeCodeButton(code.id);
+//    p.append(btn);
+// will append button after code this way
+p.insertBefore( btn,code.nextSibling);
+    
+} catch(e) {
+    vConsole.log(`processCode error:  ${e.message}`);
+}; //catch
+}; //processCode
+
+
+const findCodeTags =  () => {
+    // vConsole.log("Searching for Code tags.");
+const cTags = document.querySelectorAll("code") ;
+try {
+
+if (! cTags)vConsole.log( "No Code tags found.")
+else {
+    vConsole.log( `Found ${cTags.length} code tags.`)
+    let count = 0;
+    const newId = () => { return `codeId_9${(++count).toString().padStart(2, "0")}`; };
+
+cTags.forEach((c) => {
+processCode(c, newId());
+}); // forEach
+}; // found code tags
+} catch( e) {
+    vConsole.log("codeCopyButtons error:" + e.message );
+}; // catch
+}; // findCodeTags
+
+
+
+window.addEventListener("load", () => { 
+    findCodeTags ();
+});
+
+</script>
+
+
+
+</body>
+</div>
+
+
+
+</div>
+</body>

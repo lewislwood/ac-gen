@@ -1,0 +1,9 @@
+//video.text
+if (CardPlayer.helpStatus ==="visible" ) {
+    if (ev.key === "Escape") {
+          const hl = <HTMLDivElement>document.getElementById("helpLive");
+          if (hl) hl.innerText = "Closing Help Screen. You may want to turn off screen navigation keys for optimal experience.";
+    setTimeout( () => {CardPlayer.hideHelpScreen();}, 200)
+    } // else vConsole.log("The key pressed was: " + ev.key);
+    
+                      } else {

@@ -1,0 +1,42 @@
+<div name="track"  class="card"  data-card-title="<%= mi.name %>""   data-card-category="<%= mi.category %>"  >
+    <div class="card-flex">
+    <div class="card-desc">
+<h2 id="<%= mi.anchor %>" ><%= mi.name %>  </h2>
+<button class="share-button">
+    <img src="images/share.svg" alt="Share link to this track" class="share-svg"/>
+</button>
+
+<%- mi.description %> 
+</div>
+<div  name="controls" class="card-controls " data-card-file="<%= mi.file %>" >
+<div  class="control-panel">
+    <span>
+    <div class="card-control" name="control0" ></div>
+    <div class="card-control" name="control1" >
+    <button name="play"  class="card-button mt-2"data-action-type="play" title="Play <%= mi.name%>">
+<img class="card-img"  src="images/play.svg" width="                                 30px" height="30px" alt="Play Media" />
+</button>  
+</div>
+<div class="card-control" name="control2"></div>
+</span>
+<br>
+<span>
+<div class="card-control" name="control3" ></div>
+<div class="card-control" name="control4" >
+    <a name="download" href="./<%= mediaFolder + "/" + mi.file %>" class="mb-2" data-action-type="download"  title="Download <%= mi.name%>" download>
+    <img class="card-img"  src="images/download.svg" alt="Download Media" />
+    </a>  
+</div>
+    <div class="card-control" name="control5" ></div>
+</span>
+    </div>
+    <audio preload="metadata"  src="./<%= mediaFolder + "/" + mi.file %>"></audio>
+
+</div>
+<div class="card-status">
+    <label class="card-status1" name="status1"><%= mi.length  %> </label>
+    <br>
+    <label class="card-status2" name="status2">Pending..</label>
+</div>
+</div>
+</div>

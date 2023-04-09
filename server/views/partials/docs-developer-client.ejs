@@ -1,0 +1,24 @@
+
+<div  class="docs-grid developer-CLIENT">
+    <DIV class="GRID-COLUMN1">
+<p>    The client project folder is where the index.ts file was developed, created, debugged. A launch.json has been created that allows you to debug using the chrome browser.  Simply press f5 to debug.
+</p>
+<p>    The typescript source file is located in the src folder. There is also a devops.ts.  The devops.ts is part of the vip-dev-console repository. This allows  client side debugging with a screen reader and can be hidden or visible to blind and sighted alike (alt + shift ++ "d" ) will toggle modes. You will need to uncomment the appropiate script tag in index.html and comment out one vConsole line and uncomment the other. vConsole.log("") will log to a screen reader friendly log on the page and speak it out loud.
+</p>
+<p>
+</DIV>
+<DIV class="GRID-COLUMN2">
+    If your only interest is to customize the colors or look and feel of the player, then launching the debugger is unnecessary. Under the public/css folder you will find a themes folder. There you will find some predefined color themes. Feel free to customize yours and add it to your themes folder. Simply launch the index.html in your browser.  
+</p>
+<p>    Under the css folder the index.html will load the colors.css file. The colors.css file will load the index.css. This will make future changes and enhancements easier to incorporate into your customized themes. So any customized themes you really should back up and not loose. The index.css is to set the non-colors values. Such as padding, margins, animation.
+</p>
+</DIV>
+<DIV class="GRID-COLUMN3">
+<p>Same thing applies under the public/images folder.      The themes images. feel free to place new images there. Simply create a custom theme folder and add you images. Currently only svg is supported (hard coded), except the logo image. You can define that in the catalog-info.txt . You will need to change the appropiate css for the logo css.
+</p>
+
+<p>
+*** Note: For simplicity sake I made it dependent on fixed file names for the images. So all you do is capy you custome images with appropiate names into the root of public/images folder and replace the ones there alread. Do not worry if at a later date simply copy the standard folder contents over them and you will be back to standard once again.
+</p>
+</DIV>
+</div>

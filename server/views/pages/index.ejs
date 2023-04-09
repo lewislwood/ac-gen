@@ -1,0 +1,137 @@
+<%- include('../partials/head') %>
+
+<body class="p-2 bg-secondary text-primary D-FLEX JUSTIFY-ITEMS-CENTER">
+    <div id="initialSettings" class="player-status" aria-hidden="true">
+        <label for="" id="initialVolume"><%= volume %></label>
+    </div>
+    <div class="container d-flex justify-content-center flex-column">
+        <div id="mainContent" aria-hidden="false">        
+        <%- include('../partials/header') %>
+<div class="player-status">           
+    <h4 id="id_player_status_current">Current Status</h4>
+    <p>Disable screen reader keys for optimal key compatibility.   Press shift + "?" (question mark key) to view shortcut keys help screen. On the shortcut key help screen, be sure to reenable your screen reader keys.     </p>
+        <div id="id_player_status" aria-live="assertive"></div> 
+        <div id="id_player_info" aria-live="assertive"></div> 
+    </div>
+    <DIV id="id_media_folder" data-media-folder="<%= mediaFolder %>"  class="w-100  bg-dark text-white" role="main"  title="catalog" >
+
+            <% if (! save ) { %>
+<% if (showStatus) { %>
+    <p>This is a preview generated.  You must use the ?save=true parameter in order to save this as your index.html file.
+        For your convenience I provide this link to save.
+        <a href="<%= saveURL %>">?Save=true</a>
+        In the meantime verify all information prior to saving.
+
+     </p>
+<% } %>             
+            <% mediaList.forEach(mi=> { %>
+                <%- include('../partials/mediacard', { mi: mi}) %>
+            <% }) %>
+            <div class="post">
+                <br>
+<%- post_description %>
+            </div>
+            <% } else { %>
+        
+                <p>File has been saved. To view the file enter <%= htmlFile %> . You can shut down this server whenever you are ready. From now on you can go directly to the file and launch it directly. 
+                    Here is a verification link for your convenience only:
+                    <a href="<%= verifyURL %> ">/index.html</a>
+                    Thank you for using the audio catalog generator.
+                </p>
+                <% } %>
+        
+        
+
+    </DIV >
+<%- include('../partials/footer') %>
+</div>
+
+
+</div>
+<!-- End of content area  -->
+<div id="dlgBack"  class="hide" aria-hidden=""true"">
+ <div id="dlgModal" class="dlg" >
+     <div class="player-status ">
+     <div id="helpLive" aria-live="assertive" ></div>
+ </div>
+       <h1 id="dlgHeader">Player Shortcut KeysHeader</h1>
+       <br>
+       <table>
+<thead>
+    <caption>Table for Shortcut keys</caption>
+ <tr>
+     <th>Shortcut Key</th>
+     <th>Action Performed</th>
+ </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>shift + ?</td>
+        <td>Displays this help screen.</td>
+    </tr>
+ <tr>
+     <td>k</td>
+     <td>Play/Pause current track.</td>
+ </tr>
+ <tr>
+     <td>j</td>
+     <td>Rewind 15 seconds current track.</td>
+ </tr>
+ <tr>
+     <td>l</td>
+     <td>Fast foward 15 seconds current track.</td>
+ </tr>
+ <tr>
+     <td>shift + p</td>
+     <td>Switch to previous track.</td>
+ </tr>
+ <tr>
+     <td>shift + n</td>
+     <td>Switch to next track.</td>
+ </tr>
+ <tr>
+     <td><(less than)</td>
+     <td>Reduce playback rate..</td>
+ </tr>
+ <tr>
+     <td>> (greater than)</td>
+     <td>Increase playback rate..</td>
+ </tr>
+ <tr>
+     <td>v</td>
+     <td>Increase volume..</td>
+ </tr>
+ <tr>
+     <td>shift + v</td>
+     <td>Decrease volume..</td>
+ </tr>
+ <tr>
+     <td>m</td>
+     <td>Mute player..</td>
+ </tr>
+ <tr>
+     <td>0 through 9</td>
+     <td>Go to % of playback. ie 5 = 50% & 7  70%</td>
+ </tr>
+</tbody>
+       </table>
+
+       <br>
+       <div class="player-status ">
+         Press letter "s" to have the player say the current status of the player.
+
+         When you are using a screen reader you will need to turn off screedn reader keys in order to use any of the above keys. 
+         </div>  
+
+       <button id="closeHelpScreen" >exit</button>
+       <p>Press escape key to exit or the above button.</p>
+       <p>*** Note: I tried to stay close to YouTube shortcut keys. People and especially visually impaired have enough keys to remember</p>
+
+ </div>
+
+</div>
+
+</body>
+<!-- <script src="./js/devops.js"></script></script> -->
+<script src="./js/index.js"></script></script>
+</html>

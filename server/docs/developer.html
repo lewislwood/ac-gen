@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/docs.css" />
+    <title>LWood Audio Catalog Generator</title>
+</head>
+
+
+<body class="docs-body">
+
+  <div class="docs-container">
+  <header class="p-3 bg-dark text-white mb-3">
+    <div class="container">
+
+<div class="ac-logo-container  col-sm-2 float-start">
+    <img  class="ac-logo" src="images/lw-logo.svg" alt="Audio Catalog Genrator"/> 
+</div>
+<div class="col-sm-10 align-middle"><p class="h1 fw-bold">LWood Audio Catalog Creator</p> </div>
+<ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="index.html" class="nav-link px-2"><img src="images/overview.svg" alt="Overview" class="nav-image"/></a> </li>
+    <li class="nav-item"><a href="instructions.html" class="nav-link px-2"><img src="images/instructions.svg" alt="Instructions" class="nav-image"/></a></li>
+    <li class="nav-item"><a href="about.html" class="nav-link px-2"><img src="images/about.svg" alt="About" class="nav-image"/></a></li>
+    <li class="nav-item"><a href="developer.html" class="nav-link px-2"><img src="images/developer.svg" alt="Developer" class="nav-image"/></a></li>
+</ul> 
+
+
+        </div>
+</header>
+
+  <div class="docs-content">
+   <h1>Developer Manual</h1>
+   *** Primarily for developers only.
+
+
+    
+   
+<div title="Overview" role="main"  class="docs-wide">
+  <h2>Overview</h2>
+    
+<div  class="docs-grid developer-overview">
+<p>Project overview is as follows. Server project folder is a nodeJs server project. This is where the generation happens. The output  will be generated and placed in the public folder under the Client project folder.
+<BR>
+    The client project folder is where the client side javascript was developed. This project has the raw TypeScript files. These TypeScript files are compiled into commonJs files located in the public/js sub folder.The index.ts is the Audio catalog player. It containes 2 classes. Card-track and Card-Player classes respectively.
+</p>
+<p>
+    The whole concept is generate a media folder, then template text files per media item. Users will fill in these files appropiately to describe  them.  Catalog.txt and Catalog-post.txt will describe the catalog as a whole. Info contains pre text to appear prior to 1st track. Post of course contains text that follows the last track.
+</p>
+<p>
+    The text files are imported into the catalog.json file. that describes the entire catalog. Information from this file will be used to generate the index.html file in the public folder. EJS is the template language I use to import the catalog.json and generate the index.html file. The index.html the customer will see. 
+</p>
+</div>
+  </div>
+  <div title="Server" role="region"  class="docs-wide">
+    <h2>Server Project</h2>
+    
+<div  class="docs-grid developer-server">
+    <DIV class="GRID-COLUMN1">
+<p>    This project is a nodeJs project written in TypeScript. The typeScript files are located under the src folders. You will find routes sub folder as well as types folder. All of these src files are compiled as javaScript modules and placed in the dist folder. Server.js is the enry point.
+<br>
+    The docs folder under server project is where I store Html files that describe the project. These are basically what you are viewing right now. Although while the nodeJs server is running these files are being generated dynamically using Ejs.  The Ejs files are located under the views folder.  I create these so that users do not have to install nodeJs to read them.  Allowing them to decide.
+</p>
+<p>    Under server/docs are 3 folders (css, images, js). These are mirror copies of the very folders in the public folder. The Docs, known as manuals for this app, use only docs.css under css folder. Only a handful of svg files under images are used for these manual pages. The js folder only contains. the DevOps.js file that may or not be used to debug client side docs manuals. While server is running they will use the files under the public folder, only on file system browsing are these necessary.
+</p>
+</DIV>
+<DIV class="GRID-COLUMN2">
+<p>    The .env file will control what folder will be used for the media files and the naming of the index.html file generated.  That media folder becomes the master folder and from it the index.html file can be regenerated.  This means be sure to keep a copy of this folder for future regenerations. If that folder does not exist it creates it. Once media files exist in the media folder the user simply runs template stage and template files are automatically addded. Then the user modifies each text file template file in the folder with appropiate values. 
+</p>
+<p>    The api/import is a destructive stage, in that it will replace the catalog.json. Thus I left it as api/import to let the user know that fact.  The final stage is a make-html which first generates a preview html file. They will have to select the save file if it is what they want. Then it replaces the current index.html.
+</p>
+</DIV>
+<DIV class="GRID-COLUMN3"
+<p>    Most changes will be in Ejs files located under the views. The index.html is generated from the index.ejs file located views/pages folder. You will see the Ejs notation &lt;% ending with %&gt;, the values in between will be javascript expression and properties from the catalog.json primarily. So no debugger needed to modify these. Simply do <code>npm run start</code>.  Simply enter the command in the terminal. Then start editing the ejs files appropiately. Save the edited ejs and refresh the browser shift + f5.  The changes will be immediate on the docs manuals pages.  The make-html, you wimply enter the /make-html to view the generated html from the index.ejs file.
+</p>
+
+<p>    More advanced users will have to run it with the debugger and modify the *.ts files under the src folder. Now you need to open multiple terminals. I do ctrl + f5 to run debugger, ctrl + shift + ` to open another terminal, I then enter tsc --watch to run the automated typescript compiler, then I enter ctrl + shift + ` to run another terminal (just a precaution). 
+</p>
+
+<p>
+    **** Note: You should install typescript globally for best experience. If you want to edit typescript.  <code>npm install -g typescript</code> will install typescript globally and tsc will work anywhere. Requires Sudo command if under linux/Ubuntu.
+</p>
+></DIV>
+</div>
+    </div>
+
+    <div title="CLIENT" role="region"  class="docs-wide">
+
+    <h2>Client Project</h2>
+
+    
+<div  class="docs-grid developer-CLIENT">
+    <DIV class="GRID-COLUMN1">
+<p>    The client project folder is where the index.ts file was developed, created, debugged. A launch.json has been created that allows you to debug using the chrome browser.  Simply press f5 to debug.
+</p>
+<p>    The typescript source file is located in the src folder. There is also a devops.ts.  The devops.ts is part of the vip-dev-console repository. This allows  client side debugging with a screen reader and can be hidden or visible to blind and sighted alike (alt + shift ++ "d" ) will toggle modes. You will need to uncomment the appropiate script tag in index.html and comment out one vConsole line and uncomment the other. vConsole.log("") will log to a screen reader friendly log on the page and speak it out loud.
+</p>
+<p>
+</DIV>
+<DIV class="GRID-COLUMN2">
+    If your only interest is to customize the colors or look and feel of the player, then launching the debugger is unnecessary. Under the public/css folder you will find a themes folder. There you will find some predefined color themes. Feel free to customize yours and add it to your themes folder. Simply launch the index.html in your browser.  
+</p>
+<p>    Under the css folder the index.html will load the colors.css file. The colors.css file will load the index.css. This will make future changes and enhancements easier to incorporate into your customized themes. So any customized themes you really should back up and not loose. The index.css is to set the non-colors values. Such as padding, margins, animation.
+</p>
+</DIV>
+<DIV class="GRID-COLUMN3">
+<p>Same thing applies under the public/images folder.      The themes images. feel free to place new images there. Simply create a custom theme folder and add you images. Currently only svg is supported (hard coded), except the logo image. You can define that in the catalog-info.txt . You will need to change the appropiate css for the logo css.
+</p>
+
+<p>
+*** Note: For simplicity sake I made it dependent on fixed file names for the images. So all you do is capy you custome images with appropiate names into the root of public/images folder and replace the ones there alread. Do not worry if at a later date simply copy the standard folder contents over them and you will be back to standard once again.
+</p>
+</DIV>
+</div>
+  </div>
+
+      
+      
+</div>
+
+
+<div title="my footer" role="region">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-3 bg-dark text-white">
+        <ul class="nav col-md-4 justify-content-end">
+    <li class="nav-item"><a href="index.html" class="nav-link px-2"><img src="images/overview.svg" alt="Overview" class="nav-image"/></a> </li>
+    <li class="nav-item"><a href="instructions.html" class="nav-link px-2"><img src="images/instructions.svg" alt="Instructions" class="nav-image"/></a></li>
+    <li class="nav-item"><a href="about.html" class="nav-link px-2"><img src="images/about.svg" alt="About" class="nav-image"/></a></li>
+    <li class="nav-item"><a href="developer.html" class="nav-link px-2"><img src="images/developer.svg" alt="Developer" class="nav-image"/></a></li>
+</ul> 
+        <p class="col-md-4 mb-0 text-muted" style="float: start;">&copy; 2023 Audio Catalog Generator</p>
+        <p class="h5" style="float: end;">Powered by <a href="http://blindheroes.org/about-me/" target="__blank">Lewis Wood</a></p>
+    </footer>
+</div>
+
+
+
+<!-- <script src="/js/devops.js"></script></script> -->
+<script>
+    // const vConsole = DevOps;  // Debug Mod. Uncomment the  DevOps script tag above this onee
+    const vConsole = console; // Normal mode Be sure to comment out the DevOps Script line above this one.
+    
+
+
+const copyCodeAction = (id, img) => {
+    const code = document.getElementById(id);
+    if (code) {
+window.navigator.clipboard.writeText(code.innerText);
+// Let aria-live attribute catch button alt description change, then change it back 300ms later
+img.setAttribute("alt","Code Copied...");
+setTimeout(() => { img.setAttribute("alt", "Copy Code");}, 300);
+    }; // Do nothing if id is not found there was a boo boo
+
+}; // copyCodeAction
+
+const makeCodeButton = (id) => {
+const b = document.createElement("buttton");
+b.classList.add("code-button");
+const img = document.createElement("img");
+img.setAttribute("src",`images/copy.svg`);
+img.classList.add("code-img");
+b.append(img);
+img.setAttribute("alt", "Copy Code");
+img.setAttribute("aria-live", "polite");
+b.onclick = () => { copyCodeAction(id, img); {};}
+return b;
+}; // makeCodeButton
+
+const processCode = (code, newId) =>     {
+try {
+    const p = code.parentElement;
+    if (! code.id) code.id = newId; 
+    // vConsole.log(` Parent tag is ${p.tagName} : Code Id is ${code.id}`);
+    const btn = makeCodeButton(code.id);
+//    p.append(btn);
+// will append button after code this way
+p.insertBefore( btn,code.nextSibling);
+    
+} catch(e) {
+    vConsole.log(`processCode error:  ${e.message}`);
+}; //catch
+}; //processCode
+
+
+const findCodeTags =  () => {
+    // vConsole.log("Searching for Code tags.");
+const cTags = document.querySelectorAll("code") ;
+try {
+
+if (! cTags)vConsole.log( "No Code tags found.")
+else {
+    vConsole.log( `Found ${cTags.length} code tags.`)
+    let count = 0;
+    const newId = () => { return `codeId_9${(++count).toString().padStart(2, "0")}`; };
+
+cTags.forEach((c) => {
+processCode(c, newId());
+}); // forEach
+}; // found code tags
+} catch( e) {
+    vConsole.log("codeCopyButtons error:" + e.message );
+}; // catch
+}; // findCodeTags
+
+
+
+window.addEventListener("load", () => { 
+    findCodeTags ();
+});
+
+</script>
+
+
+</div>
+
+
+</body>

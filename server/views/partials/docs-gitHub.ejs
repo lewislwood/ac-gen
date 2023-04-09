@@ -1,0 +1,42 @@
+
+
+    <h3>Create a GitHub Repository</h3>
+    <p>** Note: you must already have a Github userid and logged in. Most people have their browsers set to automatically log them in when they navigate to GitHub.com website.  </p>
+    <p>Simply add the "/new" website end point. You can enter <a href="https://github.com/new">"GitHub.com/new" or  click this link</a>. Repository enter a short but valid repository name. You can enter a description so that users browsinng GitHub will git a valid description and/or you can add a readm file. Usually in the readme or description you will add a link to your Audio Catalog Page so that they can easily start playing your media.Which you will have to edit and enter the link later, since ou have not added any files or turned on pages for the repository yet.  *** Note: The repository must be public to use GitHub page later on.</p>
+    <p>Now you should have a repository and your address bar should now be "htighub.com/(userid)/(repository name)".  Now you can clone it to your local computer now. Unless you plan on adding files via the website github.com.</p>
+    
+        <h3>Cloning & Pushing via GitHub Desktop</h3>
+<p>It has been a few years since I tried GitHub Desktop. I as a visually impaired individual found it cumbersome back then. So I cannot give you instructions you will have to refer to GitHub Desktop instructions. You basically will want to clone it locally, update the local repo version, then commit & push the changes to GitHub.</p>
+</div>
+
+<div class="col-6">
+<h3>Cloning via Command Line</h3>
+<p>** Note: You will require an SSH key setup or use GitHub Desktop and you will need to follow GitHub Desktop instructions to clone loaclly.</p>
+<ul>
+    <li>The Git clone link follows the following format: "git@github.com:(userid)/(repo name).git". Note the git infromnt and end of the link.  For example my vsCode-Intro-Screen-Reader repo is as follows, case insensitive.  <code>git clone git@github.com:lewislwood/vscode-intro-screen-reader.git</code> You will of course have your own user id and repository naem.    </li>
+    <li>Once Once you have cloned the Repository locally you can copy the public folder. I usually like to rename the folder to "docs" in the repository. Otherwise you must copy contents to the root of the repository. Your Choice.</li>
+    <li>Now refer to the GitHub Pages Setup/configuration.</li>
+</ul>
+</div>
+
+<div class="col-6">
+    <h3>Incorporating changes or additions</h3>
+    <p>No matter how you have choosen to incorporate changes or additions you must decide if you want your catalog to rest from the root folder or the docs folder. Advanced users can use gh-pages cli to create a branch from any  folder in the repo.  For most users the 2 choices are fine.</p>
+    <p>If you choose root folder, you will copy all html files to the root folder from the public folder. Should be index.html, or some other names if you are advanced and utilizing multiple catalogs. The sub folders images, css, js, and media (or any custom name you gave it). will also be copied as well. Usually it is easiest to copy *.* from the root of the public folder to the root of your repository. This should copy the sub folders as well.</p>
+    <p>easiest way is to simply copy public folder to the root folder of your repository. Then rename the   public folder to "docs" folder. Now you are certain to have all files.</p>
+    <p>Now that you have the files in your repository locally you must push the changes to the GitHub server repository.  GithHub Desktop simply follow their instructions. Adding via files via GitHub website follow their instructions and changes are automatically incomrporated.  Command line you will need to do 3 commands.</p>
+    <ul>
+        <li><code>git add .</code> This tells git to add all the changes in the repository. ** note issue the command from the repository local root folder. Be sure to enter the "." . This says from current folder down add changed files.</li>
+        <li><code>git commit -m "updating catalog page"</code> This commits all the added changes to the local repository version.</li>
+        <li><code>git push</code> This will now push your local repository changes to the GitHub Repository version for everyone to see.</li>
+        <li>Now you can do the one time setup to turn on GitHub pages on your repository on the server.</li>
+    </ul>
+    <h3>Turning on GittHub Page</h3>
+<p>Navigate to GitHub.com/userid/repository name. Example: my github.com/lewislwood/vsCode-Intro-Screen-reader for one of my repos. Once you are on the repository, simply find the repository section and the "more" button menu. Select this menu to drop down and select settings.  For my visually impaired users do the following: control + home to go the top of page, press "r" 3 times or "d" 3 times depending if Jaws or NVDA. Once you hear repository  region press "b" for button and should be immediately presented with the "more" drop down menu button. Once menu is expanded select settings.</p>
+<p>Now your address bar should have "GitHub.com/user id/repo name/settings". So you could have just added  "/settings" to the end of the repo name to get to this settings page.  Now you need to click on the link pages under settings section. For my visually impaired Press "2" to het to Settings section (Heading level 2). Press "2" once again to get to "code and automation" section, which is a list. Use the cursor keys down or press letter "i" a few times until you reach the pages link and click it.
+</p>
+<p>Your address line should now read "GitHub.com/userId/RepoName/settings/pages". So now you know you could enter that anytime as well directly into the address bar. You will see in the settings section GitHub Pages settings area to the right of the settings category links on the left. For my fellow VIP's pres "2" for heading level "2" several times until you hear "GitHub Pages". Now cursor down throught the settings for GitHub Pages.</p>
+<p>Select the branch you want to use for your Audio Catalog. Vast majority will use the "master" or "main" branch and then select a folder to use.  GitHub by default on the main or master brach only allow you to use "root" or "docs" folder, so that is why I had you copy to root or rename public folder to "docs", more advanced that want a custom folder can use a command line product "gh-pages".</p>
+<p>Now click the save button and be patient and wait a few minutes for it to configure and launch it for the first time. Visually impaired can press "shift + 2" to go back up to the section heading and cursor down.  You sill hear configureing.</p>
+<p>Once configured and running you will get a link in the following format: "userId.GitHub.io/repo name/"" .  For example my vsCode Intor Screen Reader is @ the following address: "lewislwood.github.io/vsCode-Intro-Screen-Reader/"".  I recommend you click on the link and bookmark it. I expect you will be handing it a lot.</p>
+<p>You should be done and up and running. To update the catalog it may be best to keep the files in the public folder in a safe place.  The media folder is the most important, since everything can be recreated from it.</p>

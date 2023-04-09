@@ -1,0 +1,76 @@
+
+<!-- <script src="/js/devops.js"></script></script> -->
+<script>
+    // const vConsole = DevOps;  // Debug Mod. Uncomment the  DevOps script tag above this onee
+    const vConsole = console; // Normal mode Be sure to comment out the DevOps Script line above this one.
+    
+
+
+const copyCodeAction = (id, img) => {
+    const code = document.getElementById(id);
+    if (code) {
+window.navigator.clipboard.writeText(code.innerText);
+// Let aria-live attribute catch button alt description change, then change it back 300ms later
+img.setAttribute("alt","Code Copied...");
+setTimeout(() => { img.setAttribute("alt", "Copy Code");}, 300);
+    }; // Do nothing if id is not found there was a boo boo
+
+}; // copyCodeAction
+
+const makeCodeButton = (id) => {
+const b = document.createElement("buttton");
+b.classList.add("code-button");
+const img = document.createElement("img");
+img.setAttribute("src",`<%= (action === "server")? "/":"" %>images/copy.svg`);
+img.classList.add("code-img");
+b.append(img);
+img.setAttribute("alt", "Copy Code");
+img.setAttribute("aria-live", "polite");
+b.onclick = () => { copyCodeAction(id, img); {};}
+return b;
+}; // makeCodeButton
+
+const processCode = (code, newId) =>     {
+try {
+    const p = code.parentElement;
+    if (! code.id) code.id = newId; 
+    // vConsole.log(` Parent tag is ${p.tagName} : Code Id is ${code.id}`);
+    const btn = makeCodeButton(code.id);
+//    p.append(btn);
+// will append button after code this way
+p.insertBefore( btn,code.nextSibling);
+    
+} catch(e) {
+    vConsole.log(`processCode error:  ${e.message}`);
+}; //catch
+}; //processCode
+
+
+const findCodeTags =  () => {
+    // vConsole.log("Searching for Code tags.");
+const cTags = document.querySelectorAll("code") ;
+try {
+
+if (! cTags)vConsole.log( "No Code tags found.")
+else {
+    vConsole.log( `Found ${cTags.length} code tags.`)
+    let count = 0;
+    const newId = () => { return `codeId_9${(++count).toString().padStart(2, "0")}`; };
+
+cTags.forEach((c) => {
+processCode(c, newId());
+}); // forEach
+}; // found code tags
+} catch( e) {
+    vConsole.log("codeCopyButtons error:" + e.message );
+}; // catch
+}; // findCodeTags
+
+
+
+window.addEventListener("load", () => { 
+    findCodeTags ();
+});
+
+</script>
+

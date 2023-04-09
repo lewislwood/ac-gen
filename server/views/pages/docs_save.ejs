@@ -1,0 +1,29 @@
+<%- include('../partials/docs-head') %>
+<%- include('../partials/docs-header') %>
+<body class="p-2 bg-secondary text-primary">
+
+<div class="container-lg justify-content-center justify-self-center    bg-dark text-white m-4 text-center">
+<% if (action === "server") { %>
+    <h1>What would you like to save?</h1>
+
+    <% } else { %>
+     
+<% if (files.length === 1) { %>
+    <h1>You saved 1 file</h1>
+ <p class=""h3>You saved to file: <%= files[0]%>  </p>
+ <% } else { %>
+  <h1 clas="text--center">You saved the folling (<%= files.length %> ) files:</h1><br>
+  <div class=""d-flex justify-self-center">
+  <ul class="h3 justify-self-center">
+  <% files.forEach(element => { %>
+   <li class="text-start"><%= element %> </li>
+  <% }) %>
+</ul>
+</div>
+<% } %>
+<% } %>
+
+</div>
+
+</body>
+<%- include('../partials/docs-footer') %>

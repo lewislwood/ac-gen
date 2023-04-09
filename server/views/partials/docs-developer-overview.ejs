@@ -1,0 +1,13 @@
+
+<div  class="docs-grid developer-overview">
+<p>Project overview is as follows. Server project folder is a nodeJs server project. This is where the generation happens. The output  will be generated and placed in the public folder under the Client project folder.
+<BR>
+    The client project folder is where the client side javascript was developed. This project has the raw TypeScript files. These TypeScript files are compiled into commonJs files located in the public/js sub folder.The index.ts is the Audio catalog player. It containes 2 classes. Card-track and Card-Player classes respectively.
+</p>
+<p>
+    The whole concept is generate a media folder, then template text files per media item. Users will fill in these files appropiately to describe  them.  Catalog.txt and Catalog-post.txt will describe the catalog as a whole. Info contains pre text to appear prior to 1st track. Post of course contains text that follows the last track.
+</p>
+<p>
+    The text files are imported into the catalog.json file. that describes the entire catalog. Information from this file will be used to generate the index.html file in the public folder. EJS is the template language I use to import the catalog.json and generate the index.html file. The index.html the customer will see. 
+</p>
+</div>

@@ -1,0 +1,58 @@
+<%- include('../partials/head') %>
+
+<body class="p-2 bg-secondary text-primary D-FLEX JUSTIFY-ITEMS-CENTER">
+    <div class="container d-flex justify-content-center flex-column">
+        <%- include('../partials/header') %>
+    <DIV class="w-100  bg-dark text-white" role="main"  title="catalog" >
+
+<h1>Template creation summary</h1>
+<p>This is the status screen for the result of the template creation process. You will want to run this page after you add media files again.s.
+</p>
+
+<p>Template utility creates the descriptor files that will be used to describe your catalog and media files. You will have two sections. Catalog section are descriptors that describe in general and a post descriptor file that will describe any messages you want to display towards the footer of the catalog. (ie.. My patreon link and my paypal or order formm page.).</p>
+
+<h2>Catalog Section</h2>
+<span><label>Media Folder: </label><b><%= folder %></b></span>
+<span><label>Media types: </label><b><%= types%></b></span>
+<ul>
+    <% catalog.forEach(cs => { %>
+        <li><%= cs.name + " => " + cs.status %></li> 
+    <% }) %>
+</ul>
+<div class="D-FLEX flex-column container-md"role="region"title="media">
+    <DIV class="COL-LG-4 COL-MD-2 COL-SM-1"></DIV>
+    <DIV class="D-BLOCK">
+<h2>Media Files Section</h2>
+    <% if (mediaFiles.length === 0) { %>
+<p class="h3">You have no media files. You must add media files first. So please add media files and re-run this utility page.</p>     
+        <% } else { %>
+<table class="table table-dark">
+    <thead>
+        <caption><%= status %> </caption>
+        <tr>
+            <th scope=""col">Media File</th>
+            <th scope=""col">Descriptor File</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% mediaFiles.forEach(m => { %>
+<tr>
+    <td><%= m.media %> </td>
+    <td><%= m.name %> </td>
+    <td><%= m.status %> </td>
+</tr>         
+        <% }) %>
+    </tbody>
+</table>
+</DIV>
+<% } %>
+
+</div>
+
+<%- include('../partials/footer') %>
+</div>
+</DIV>
+
+</body>
+</html>

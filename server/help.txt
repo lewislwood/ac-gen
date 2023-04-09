@@ -1,0 +1,25 @@
+
+
+Creating a Express Typescript app
+
+npx tsc -init
+
+npm init -y
+
+mkdir src
+touch src/app.tsc
+
+npm add -D ts-node-dev typescript -
+
+## Add script
+"dev": "ts-node-dev --respawn --transpile-only src/app.ts",
+
+
+npm add Express
+
+npm add -D @types/node @types/Express 
+
+
+
+
+

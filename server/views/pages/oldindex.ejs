@@ -1,0 +1,34 @@
+<%- include('../partials/head') %>
+
+<body class="p-2 bg-secondary text-primary D-FLEX JUSTIFY-ITEMS-CENTER">
+    <div class="container d-flex justify-content-center flex-column">
+        <%- include('../partials/header') %>
+    <DIV class="w-100  bg-dark text-white" role="main"  title="catalog" >
+
+            <% if (! ["yes", "true"].includes( save)) { %>
+<% if (showStatus) { %>
+    <p>This is a preview generated.  You must use the ?save=true parameter in order to save this as your index.html file.
+        For your convenience I provide this link to save.
+        <a href="<%= saveURL %>">?Save=true</a>
+        In the meantime verify all information prior to saving.
+
+     </p>
+<% } %>             
+            <% mediaList.forEach(mi=> { %>
+                <%- include('../partials/mediacard', { mi: mi}) %>
+            <% }) %>
+            <% } else { %>
+        
+                <p>File has been saved. To view the file enter <%= htmlFile %> . You can shut down this server whenever you are ready. From now on you can go directly to the file and launch it directly. 
+                    Here is a verification link for your convenience only:
+                    <a href="<%= verifyURL %> ">/index.html</a>
+                    Thank you for using the audio catalog generator.
+                </p>
+                <% } %>
+        
+        
+
+    </DIV>
+</div>
+</body>
+<%- include('../partials/footer') %>

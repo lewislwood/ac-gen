@@ -1,0 +1,27 @@
+type acURLs = {
+    action: "server" | "html";
+    docs: string[];
+    previous: string;
+    next: string;
+    current: string;
+    'docs_about': string;
+    'docs_instructions': string;
+    "docs_download": string;
+    'docs_index': string;
+    "docs_developer": string;
+    import: string;
+    html: string;
+    git: string;
+    nodejs: string;
+    website: string;
+    repo: string;
+    zip: string;
+    serverURL?: string;
+};
+export declare const newURLs: () => acURLs;
+export declare const URLs: acURLs;
+export declare function navURLs(current: string, myURLs: acURLs): acURLs;
+export declare const saveDocFile: (docFile: string, output: string) => string;
+export declare function docsRender(res: any, page: string, URLs: acURLs, renderSave?: boolean): Promise<string>;
+export declare function docsRenderAll(res: any): Promise<void>;
+export {};

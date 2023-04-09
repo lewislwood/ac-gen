@@ -1,0 +1,28 @@
+
+<div  class="docs-grid developer-server">
+    <DIV class="GRID-COLUMN1">
+<p>    This project is a nodeJs project written in TypeScript. The typeScript files are located under the src folders. You will find routes sub folder as well as types folder. All of these src files are compiled as javaScript modules and placed in the dist folder. Server.js is the enry point.
+<br>
+    The docs folder under server project is where I store Html files that describe the project. These are basically what you are viewing right now. Although while the nodeJs server is running these files are being generated dynamically using Ejs.  The Ejs files are located under the views folder.  I create these so that users do not have to install nodeJs to read them.  Allowing them to decide.
+</p>
+<p>    Under server/docs are 3 folders (css, images, js). These are mirror copies of the very folders in the public folder. The Docs, known as manuals for this app, use only docs.css under css folder. Only a handful of svg files under images are used for these manual pages. The js folder only contains. the DevOps.js file that may or not be used to debug client side docs manuals. While server is running they will use the files under the public folder, only on file system browsing are these necessary.
+</p>
+</DIV>
+<DIV class="GRID-COLUMN2">
+<p>    The .env file will control what folder will be used for the media files and the naming of the index.html file generated.  That media folder becomes the master folder and from it the index.html file can be regenerated.  This means be sure to keep a copy of this folder for future regenerations. If that folder does not exist it creates it. Once media files exist in the media folder the user simply runs template stage and template files are automatically addded. Then the user modifies each text file template file in the folder with appropiate values. 
+</p>
+<p>    The api/import is a destructive stage, in that it will replace the catalog.json. Thus I left it as api/import to let the user know that fact.  The final stage is a make-html which first generates a preview html file. They will have to select the save file if it is what they want. Then it replaces the current index.html.
+</p>
+</DIV>
+<DIV class="GRID-COLUMN3"
+<p>    Most changes will be in Ejs files located under the views. The index.html is generated from the index.ejs file located views/pages folder. You will see the Ejs notation &lt;% ending with %&gt;, the values in between will be javascript expression and properties from the catalog.json primarily. So no debugger needed to modify these. Simply do <code>npm run start</code>.  Simply enter the command in the terminal. Then start editing the ejs files appropiately. Save the edited ejs and refresh the browser shift + f5.  The changes will be immediate on the docs manuals pages.  The make-html, you wimply enter the /make-html to view the generated html from the index.ejs file.
+</p>
+
+<p>    More advanced users will have to run it with the debugger and modify the *.ts files under the src folder. Now you need to open multiple terminals. I do ctrl + f5 to run debugger, ctrl + shift + ` to open another terminal, I then enter tsc --watch to run the automated typescript compiler, then I enter ctrl + shift + ` to run another terminal (just a precaution). 
+</p>
+
+<p>
+    **** Note: You should install typescript globally for best experience. If you want to edit typescript.  <code>npm install -g typescript</code> will install typescript globally and tsc will work anywhere. Requires Sudo command if under linux/Ubuntu.
+</p>
+></DIV>
+</div>

@@ -1,0 +1,33 @@
+
+    <h1>Instructions...</h1>  
+    <ul>
+      <li>
+        <h3>Start the Server</h3>
+        <p>You must first start the server in order to generate all the necessary components. You already are if your address bar has localhost:5000/docs/instructions which is this page. Otherwise, you are viewing this page from the hard drive and not the localhost server.
+         </p><p>Enter <code>npm run start</code> on the command line in the root folder for this project.</p>
+      </li>
+      <LI>
+        <H3>Browser should Launch Automatically</H3>
+        <p>If the browser did not launch automatically then you will need to launch it manually. </p><p> You must now launch the server into your browser. You can enter <%= serverURL %> or <a href="<%= serverURL %>">click here</a> Then you will see localhost in your address bar. You can  navigate to /docs/instructions to get to this instructions on the server.</p>
+        ** Note the default port is 5000, unless you changed it in the .env file found in your root folder. 
+      </LI>
+    <li>
+      <h3>Add Media and Describe it</h3>
+      <p>You must now navigate to "/templates" or <a href="/templates"target="__blank">click here</a>. This step will generate the template folder if not exist with the default template descriptor files. It will then copy the template descriptor files into your media folder. You can modify the template descritor files in the template folder to fit your default needs, otherwise just edit them in the media folder. The catalog will be generated the descriptor files in the media folder.</p>
+      <p>Media folder and media file are defined in the .env file found in your root folder. Just accept the defaults unless you plan on making multiple catalogs.</p>
+      <p>Add media files to your media folder. Defult is mp3 which is specified in the .env file. If you added media then you will want to re-run the templates step again in order to generate descriptors for the inserted media. </p>
+    </li>
+    <li>
+      <h3>Import Descriptors</h3>
+      <p>You now must import all of those descriptor files into a catalog.json file. This is the file that will be used to generate the final catalog file (usually namved index.html). To import enter "/api/import" or <a href="/api/import" target="__blank">click here</a>.</p>
+      <p>You will see a json file displayed in your browser. These are the values that were imported from all of your descriptor files. Most people will see this and it makes no sense, so feel free to ignore it. If you are at home modifying json files, you can go to your media folder and pull the catalog.json file in any text editor. *** Warning if your re-run the /api/import step above again it will override your current catalog.json.</p>
+    </li>
+    <li>
+      <h3>Generate Catalog html file</h3>
+    <p>This step is the final step. You will now enter "/make-html" or <a href="/make-html"target="__blank" >click here</a>.  Now you will see a preview of your "Audio Catalog Page". Review it carefully and if you have any changes simply go back and edit the appropiate file. Descriptor files you must run templates again, and so on. </p>
+    <p>Once you have the version you want you simply add "?save=true" to the address line and it will save it.  Here is a link for your convenience <a href="/make-html?save=true"target="__blank" >/make-html?save=true</a></p>
+    </li>
+    </ul>
+    <h2>Finished now publish</h2>
+    <p>You can simply copy the public folder and all its subfolders to anywhere you desire. Your default catalog file is located in the public folder as index.html. Put it on a shared drive, gdrive, local drive, etc... Now for those with GitHub configured you can publish directly there *** see below ****</p>
+    
