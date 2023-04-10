@@ -1,2 +1,3 @@
+/server/node_modules
 /client/public/*/*.mp3
 *temp.txt
