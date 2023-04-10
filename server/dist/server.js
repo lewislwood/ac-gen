@@ -21,8 +21,8 @@ process.argv.forEach((p) => { if (p.toLowerCase() === "--open")
 const launchBrowser = (u) => __awaiter(void 0, void 0, void 0, function* () { open(u); });
 const app = (0, express_1.default)();
 const port = process.env.PORT || 5000;
-app.use("/templates", require("./routes/templates"));
 app.set("view engine", "ejs");
+app.use("/templates", require("./routes/templates"));
 app.use("/api/import", require("./routes/apiimport"));
 app.use("/make-html", require("./routes/html"));
 app.use("/docs", require("./routes/docs"));

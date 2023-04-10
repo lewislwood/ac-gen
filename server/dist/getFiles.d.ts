@@ -1,5 +1,5 @@
 import 'dotenv/config';
-type mediaFile = {
+declare type mediaFile = {
     name: string;
     ext: string | null;
     fileDate: Date;

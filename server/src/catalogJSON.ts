@@ -57,6 +57,7 @@ if (buffer.length > 0) {
   // cat = (buffer.toJSON() as unknown) as Catalog;
   const str = buffer.toString();
   const cat  = JSON.parse( str) as lwLib.Catalog;
+  if (! cat.logo) cat.logo = "logo.svg";
   return sortMedia( cat);
 }
       } 

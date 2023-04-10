@@ -1,4 +1,4 @@
-type acURLs = {
+declare type acURLs = {
     action: "server" | "html";
     docs: string[];
     previous: string;

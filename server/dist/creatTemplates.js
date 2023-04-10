@@ -189,7 +189,7 @@ function copyTemplates(res) {
             const xl = yield Promise.all(myPromises);
             // console.log(JSON.stringify(xl,null, "   "));;
             const p = path_1.default.resolve(__dirname, "..", "views", "pages", "templates.ejs");
-            res.render(p, Object.assign(Object.assign({}, status), { doc_title: "Templates descriptor Status Summary", cat_title: "Templates Status Summary" }));
+            res.render(p, Object.assign(Object.assign({}, status), { doc_title: "Templates descriptor Status Summary", cat_title: "Templates Status Summary", logo: "logo.svg", logoAlt: "Your logo goes here .." }));
         }
         catch (error) {
             console.log("copyTemplates error: ", error.message);

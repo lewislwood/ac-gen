@@ -50,6 +50,8 @@ function readCatalog() {
                 // cat = (buffer.toJSON() as unknown) as Catalog;
                 const str = buffer.toString();
                 const cat = JSON.parse(str);
+                if (!cat.logo)
+                    cat.logo = "logo.svg";
                 return sortMedia(cat);
             }
         }

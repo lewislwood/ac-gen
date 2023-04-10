@@ -1,8 +1,8 @@
-type TagItem = {
+declare type TagItem = {
     key: string;
     value: string;
 };
-type TagDesc = {
+declare type TagDesc = {
     tags: TagItem[];
     description: string;
 };

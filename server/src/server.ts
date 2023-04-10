@@ -11,8 +11,8 @@ const launchBrowser =  async  (u:string) =>  { open(u)};
 
 const app = express();
 const port = process.env.PORT || 5000; 
-app.use("/templates", require("./routes/templates"));
 app.set("view engine", "ejs");
+app.use("/templates", require("./routes/templates"));
 app.use("/api/import", require("./routes/apiimport"));
 app.use("/make-html", require("./routes/html"));
 app.use("/docs", require("./routes/docs"));
