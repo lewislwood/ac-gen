@@ -2,6 +2,8 @@
 [logo]=
 [doc_title]=Browser Doc Title
 [cat_title]=Catalog Title
+# initial Volume (if soft or loud media) valid numbers 0.1 - 1.0
+[volume]=0.4
 # Allows users to select categories
 [allow_category_filter]=true
 # if you only wnat certain categories to be visible

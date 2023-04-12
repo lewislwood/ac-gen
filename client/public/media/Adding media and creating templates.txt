@@ -1,0 +1,12 @@
+# Media Info file.  This file describes the media with the same name. 
+# You must copy this template file into media folder and name it the same name as the media file with the .txt extension.
+# Media friendly name
+[name]=Adding Media and filling template files
+# Custom anchor tag, otherwise one will be genrated from name above.  This way when you share a direct link to this media it has your custom tag (perhaps shorter and more meaningful.
+[anchor]=acGenTemplates
+[order]=14
+[category]=General
+[length]=16:57
+# *****  Ends the tag info section ***
+Walkthrough: Run the template step to generate folder and catalog template descriptor files.  Add media to the media folder created. Rerun the template step to create one media descriptor file for each media file (named the same with txt extenson). Then you fill out all template descriptor files.
+These files will generate the Audio Catalog for you and appear on the catalog.

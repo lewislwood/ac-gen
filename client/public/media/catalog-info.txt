@@ -1,20 +1,15 @@
 #  Catalog info file. Settings and directives to configure catalog
 [logo]=logo.svg
-[doc_title]=Vs Code Introduction with Screen Reader
-[cat_title]=VsCode Introduction
+[doc_title]=Audio Catalog Generator
+[cat_title]=AC Generator
 # initial Volume (if soft or loud media) valid numbers 0.1 - 1.0
-[volume]=0.5
+[volume]=0.4
 # Allows users to select categories
 [allow_category_filter]=true
 # if you only wnat certain categories to be visible
 [category_filter]=
         # Menu Link to point to
-[menu_link]=http://Helpme.org
-,
-[menu_text]=Give me blood
+[menu_link]=manual/index.html
+[menu_text]=Audio Catalog Generator User Manual
 # Instructional text prior to media files
-This catalog of audio webinars introduce Vs Code to visually impaired. Techniques for navigating and modifying code.  Also how to change sttings.
-
-Microsfot Accessiblity provide some wonderful webinars/videos as well. This is a supplement. I express techniques that have helped me along using a screen reader.  It is so hard, since sighted take for granted that the knowledge to perform that task is quite obvious (Just look!).  
- 
-I hope to address these issues and present a large catalog of videos in a quick manner.
+Catalog of helpful audio files on how this tool can be used to generate the <a href="http://github.com/lewislwood/ac-gen" >AC-Gen Repository</a>.  These audio cards will walk through download this generator, creating your own GitHub repository, Bilding the your own audio catalog for that repository. Also how to turn "GitHub Pages" on in your repository.  Happy podcasting.

@@ -1,0 +1,6 @@
+#This is the paragraph(s) at the end of the html file#  Simply type in some text or html. 
+<h5>Resources</h5>
+<a href="https://nodejs.org/en/download">NodeJs Dowload</a>
+<a href="https://git-scm.com/download/win">Git Download for Windows</a>.  Note Linux, WSL, have Git already installed. If visually impaired and you install this one, be sure you do not check wsl or Linux integration, and do not enable gui. 
+Article on how to configure <a href="https://blindheroes.org/websites/wordpress/ssh/">SSH and GitHub</a> for easy uploads and secure.
+<a href="https://desktop.github.com/">GitHub Desktop </a> for those that want a full featured GUI and not a command line interface. This is easier and does not require a lot of SSH key generation.

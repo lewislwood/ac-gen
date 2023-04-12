@@ -1,0 +1,11 @@
+# Media Info file.  This file describes the media with the same name. 
+# You must copy this template file into media folder and name it the same name as the media file with the .txt extension.
+# Media friendly name
+[name]=Easy editing and adding media
+# Custom anchor tag, otherwise one will be genrated from name above.  This way when you share a direct link to this media it has your custom tag (perhaps shorter and more meaningful.
+[anchor]=acGenEasyUpdating
+[order]=17
+[category]=General
+[length]=25:01
+# *****  Ends the tag info section ***
+Walkthrough on how easy it is to add and modify existing html cards in your Audio Catalog Generator. What is the practical steps. I update it after generating using Git and GetHub hosting. You can simply copy the public folder to anywhere you desire.

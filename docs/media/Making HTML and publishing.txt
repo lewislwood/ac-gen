@@ -1,0 +1,13 @@
+# Media Info file.  This file describes the media with the same name. 
+# You must copy this template file into media folder and name it the same name as the media file with the .txt extension.
+# Media friendly name
+[name]=Generating HTML for your Audio Catalog
+# Custom anchor tag, otherwise one will be genrated from name above.  This way when you share a direct link to this media it has your custom tag (perhaps shorter and more meaningful.
+[anchor]=acGenMakeHTML
+[order]=16
+[category]=General
+[length]=14:46
+# *****  Ends the tag info section ***
+Walkthrough on generating the HTML for the Audio Catalog. You will be able to preview it before you commit this catalog. Safty would not want you to accidentally replace a good audio catalog.
+Then I demonstrate copying the public folder into myvsCode Repository and rename the folder to docs off the root folder of the repository. You could just copy this folder anywhere and be done, but if you are suing GitHub and Git system, you want these extera instructions. ("Git add .", "Git status", "git commit -m"commit message"", "git push").
+

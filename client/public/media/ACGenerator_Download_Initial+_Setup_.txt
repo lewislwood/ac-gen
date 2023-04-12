@@ -1,0 +1,12 @@
+# Media Info file.  This file describes the media with the same name. 
+# You must copy this template file into media folder and name it the same name as the media file with the .txt extension.
+# Media friendly name
+[name]=How to Download the Generator and perform initial setup
+# Custom anchor tag, otherwise one will be genrated from name above.  This way when you share a direct link to this media it has your custom tag (perhaps shorter and more meaningful.
+[anchor]=acGenDownloadSetup
+[order]=12
+[category]=General
+[length]=11:00
+# *****  Ends the tag info section ***
+Walkthrough download the Audio Catalog Generator multiple ways. Using Git (my favorite), as a zip file. There is also GitHub Desktop as an option. 
+Then tell you to do initial setup "npm install" at the server folder. Then you are ready to run it "npm run start".

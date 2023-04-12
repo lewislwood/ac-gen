@@ -1,0 +1,11 @@
+# Media Info file.  This file describes the media with the same name. 
+# You must copy this template file into media folder and name it the same name as the media file with the .txt extension.
+# Media friendly name
+[name]=Folder Layout of repository/generator
+# Custom anchor tag, otherwise one will be genrated from name above.  This way when you share a direct link to this media it has your custom tag (perhaps shorter and more meaningful.
+[anchor]=acFolderLayout
+[order]=13
+[category]=General
+[length]=10:20
+# *****  Ends the tag info section ***
+I walkthrough the folder layout of the Repository/ Generator. I tell you what to not touch and what you can delete if desired. Also inform youu where the folder is that you will find your Audio Catalog. You simply copy client/Public folder to anywhere you want the static site for your Audio Catalog. 

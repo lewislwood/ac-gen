@@ -1,0 +1,103 @@
+{
+  "application": {
+    "name": "Audio-Catalog",
+    "created": "2023-04-12T18:25:58.366Z",
+    "developer": "Lewis Wood",
+    "website": "http://blindheroes.org"
+  },
+  "allow_category_filter": true,
+  "overview": "<p 'ta-justify'># Menu Link to point to</p><p>[menu_link]=manual/index.html</p><p>[menu_text]=Audio Catalog Generator User Manual</p><p>Catalog of helpful audio files on how this tool can be used to generate the <a href=\"http://github.com/lewislwood/ac-gen\" >AC-Gen Repository</a>.  These audio cards will walk through download this generator, creating your own GitHub repository, Bilding the your own audio catalog for that repository. Also how to turn \"GitHub Pages\" on in your repository.  Happy podcasting.</p>",
+  "help": "Select the Play button or Download to download the media.",
+  "logo": "logo.svg",
+  "logoAlt": "logo for Audio Acatalog",
+  "volume": 0.4,
+  "mediaList": [
+    {
+      "file": "ac-gen_Overview.mp3",
+      "name": "AC Generator Introduction & Overview",
+      "length": "14:17",
+      "type": "mp3",
+      "size": 13712821,
+      "Modified": "2023-04-11T18:13:30.570Z",
+      "order": 11,
+      "category": "General",
+      "description": "<p 'ta-justify'>This audio will describe in detail how to play the Audio Catalog Player. Discusses using it without screen reader keys and the benefits. Talks how to access it with screen reader navigation keys turned on. Discusses playing media faster/slower. How blind get Player Status on demand the same as visual people get when they look at the screen. Very Accessible to visually impair/blind and pleasant to the sighted.</p><p>Customizable for colors and icons/ logo. So start generating your own catalog today.</p>",
+      "anchor": "ac-generator-introduction-&-ov"
+    },
+    {
+      "file": "ACGenerator_Download_Initial+_Setup_.mp3",
+      "name": "How to Download the Generator and perform initial setup",
+      "length": "11:00",
+      "type": "mp3",
+      "size": 10565589,
+      "Modified": "2023-04-11T18:43:15.475Z",
+      "order": 12,
+      "category": "General",
+      "description": "<p 'ta-justify'>Walkthrough download the Audio Catalog Generator multiple ways. Using Git (my favorite), as a zip file. There is also GitHub Desktop as an option.</p><p>Then tell you to do initial setup \"npm install\" at the server folder. Then you are ready to run it \"npm run start\".</p>",
+      "anchor": "how-to-download-the-generator-"
+    },
+    {
+      "file": "AC-gen_Folders.mp3",
+      "name": "Folder Layout of repository/generator",
+      "length": "10:20",
+      "type": "mp3",
+      "size": 9930291,
+      "Modified": "2023-04-12T15:07:02.491Z",
+      "order": 13,
+      "category": "General",
+      "description": "<p 'ta-justify'>I walkthrough the folder layout of the Repository/ Generator. I tell you what to not touch and what you can delete if desired. Also inform youu where the folder is that you will find your Audio Catalog. You simply copy client/Public folder to anywhere you want the static site for your Audio Catalog.</p>",
+      "anchor": "folder-layout-of-repository/ge"
+    },
+    {
+      "file": "Adding media and creating templates.mp3",
+      "name": "Adding Media and filling template files",
+      "length": "16:57",
+      "type": "mp3",
+      "size": 16278673,
+      "Modified": "2023-04-11T23:42:42.902Z",
+      "order": 14,
+      "category": "General",
+      "description": "<p 'ta-justify'>Walkthrough: Run the template step to generate folder and catalog template descriptor files.  Add media to the media folder created. Rerun the template step to create one media descriptor file for each media file (named the same with txt extenson). Then you fill out all template descriptor files.</p><p>These files will generate the Audio Catalog for you and appear on the catalog.</p>",
+      "anchor": "adding-media-and-filling-templ"
+    },
+    {
+      "file": "Making HTML and publishing.mp3",
+      "name": "Generating HTML for your Audio Catalog",
+      "length": "14:46",
+      "type": "mp3",
+      "size": 14178846,
+      "Modified": "2023-04-12T00:04:02.289Z",
+      "order": 16,
+      "category": "General",
+      "description": "<p 'ta-justify'>Walkthrough on generating the HTML for the Audio Catalog. You will be able to preview it before you commit this catalog. Safty would not want you to accidentally replace a good audio catalog.</p><p>Then I demonstrate copying the public folder into myvsCode Repository and rename the folder to docs off the root folder of the repository. You could just copy this folder anywhere and be done, but if you are suing GitHub and Git system, you want these extera instructions. (\"Git add .\", \"Git status\", \"git commit -m\"commit message\"\", \"git push\").</p>",
+      "anchor": "generating-html-for-your-audio"
+    },
+    {
+      "file": "Easy adding Updating.mp3",
+      "name": "Easy editing and adding media",
+      "length": "25:01",
+      "type": "mp3",
+      "size": 24023039,
+      "Modified": "2023-04-12T01:03:41.573Z",
+      "order": 17,
+      "category": "General",
+      "description": "<p 'ta-justify'>Walkthrough on how easy it is to add and modify existing html cards in your Audio Catalog Generator. What is the practical steps. I update it after generating using Git and GetHub hosting. You can simply copy the public folder to anywhere you desire.</p>",
+      "anchor": "easy-editing-and-adding-media"
+    },
+    {
+      "file": "Creating_a_GitHub_Repository.mp3",
+      "name": "Crating a Repository on GitHub",
+      "length": "8:19",
+      "type": "mp3",
+      "size": 7929520,
+      "Modified": "2023-04-11T19:26:28.213Z",
+      "order": 21,
+      "category": "General",
+      "description": "<p 'ta-justify'>Walkthroug to creating a Repository that will house your own Audio Catalog. You will need to have a GitHub account and be logged in. The basic address ig <a href=\"http://github.com/new\">GitHub.com/new</a>. Only requirement is that it must be public, unless you have a professional account. Fill descript and include a readme if descired. Repository will display the readme file for the repository if present. Otherwise, description wil be sued. This has no impact on your Audio catalog for repos readme.</p>",
+      "anchor": "crating-a-repository-on-github"
+    }
+  ],
+  "doc_title": "Audio Catalog Generator",
+  "cat_title": "AC Generator",
+  "post_description": "<p 'ta-justify'><h5>Resources</h5></p><p><a href=\"https://nodejs.org/en/download\">NodeJs Dowload</a></p><p><a href=\"https://git-scm.com/download/win\">Git Download for Windows</a>.  Note Linux, WSL, have Git already installed. If visually impaired and you install this one, be sure you do not check wsl or Linux integration, and do not enable gui.</p><p>Article on how to configure <a href=\"https://blindheroes.org/websites/wordpress/ssh/\">SSH and GitHub</a> for easy uploads and secure.</p><p><a href=\"https://desktop.github.com/\">GitHub Desktop </a> for those that want a full featured GUI and not a command line interface. This is easier and does not require a lot of SSH key generation.</p>"
+}

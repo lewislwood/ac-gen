@@ -1,0 +1,11 @@
+# Media Info file.  This file describes the media with the same name. 
+# You must copy this template file into media folder and name it the same name as the media file with the .txt extension.
+# Media friendly name
+[name]=Crating a Repository on GitHub
+# Custom anchor tag, otherwise one will be genrated from name above.  This way when you share a direct link to this media it has your custom tag (perhaps shorter and more meaningful.
+[anchor]=acGenNewRepo
+[order]=21
+[category]=General
+[length]=8:19
+# *****  Ends the tag info section ***
+Walkthroug to creating a Repository that will house your own Audio Catalog. You will need to have a GitHub account and be logged in. The basic address ig <a href="http://github.com/new">GitHub.com/new</a>. Only requirement is that it must be public, unless you have a professional account. Fill descript and include a readme if descired. Repository will display the readme file for the repository if present. Otherwise, description wil be sued. This has no impact on your Audio catalog for repos readme.

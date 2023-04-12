@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/colors.css" />
+    <title> 
+        
+        Audio Catalog Generator
+    </title>
+</head>
+
+
+<body class="p-2 bg-secondary text-primary D-FLEX JUSTIFY-ITEMS-CENTER">
+    <div id="initialSettings" class="player-status" aria-hidden="true">
+        <label for="" id="initialVolume">0.4</label>
+    </div>
+    <div class="container d-flex justify-content-center flex-column">
+        <div id="mainContent" aria-hidden="false">        
+        <header class="p-3 bg-dark text-white mb-4">
+    <div class="container-SM">
+
+<div class="col-sm-2 float-start logo-container">
+    <img src="images/logo.svg" class="logo" alt="logo for Audio Acatalog"  /> 
+</div>
+<div class="col-sm-10 align-middle">
+    <h1>AC Generator </h1> 
+</div>
+</div>
+
+<button id="helpButton"> 
+    <img class="helpButtonImage" src="images/help.svg" alt="Shortcut keys Help Screen" />
+    </button>
+</header>
+<div class="player-status">           
+    <h4 id="id_player_status_current">Current Status</h4>
+    <p>Disable screen reader keys for optimal key compatibility.   Press shift + "?" (question mark key) to view shortcut keys help screen. On the shortcut key help screen, be sure to reenable your screen reader keys.     </p>
+        <div id="id_player_status" aria-live="assertive"></div> 
+        <div id="id_player_info" aria-live="assertive"></div> 
+    </div>
+    <DIV id="id_media_folder" data-media-folder="media"  class="w-100  bg-dark text-white" role="main"  title="catalog" >
+
+            
+             
+            
+                <div name="track"  class="card"  data-card-title="AC Generator Introduction &amp; Overview""   data-card-category="General"  >
+    <div class="card-flex">
+    <div class="card-desc">
+<h2 id="ac-generator-introduction-&amp;-ov" >AC Generator Introduction &amp; Overview  </h2>
+<button class="share-button">
+    <img src="images/share.svg" alt="Share link to this track" class="share-svg"/>
+</button>
+
+<p 'ta-justify'>This audio will describe in detail how to play the Audio Catalog Player. Discusses using it without screen reader keys and the benefits. Talks how to access it with screen reader navigation keys turned on. Discusses playing media faster/slower. How blind get Player Status on demand the same as visual people get when they look at the screen. Very Accessible to visually impair/blind and pleasant to the sighted.</p><p>Customizable for colors and icons/ logo. So start generating your own catalog today.</p> 
+</div>
+<div  name="controls" class="card-controls " data-card-file="ac-gen_Overview.mp3" >
+<div  class="control-panel">
+    <span>
+    <div class="card-control" name="control0" ></div>
+    <div class="card-control" name="control1" >
+    <button name="play"  class="card-button mt-2"data-action-type="play" title="Play AC Generator Introduction &amp; Overview">
+<img class="card-img"  src="images/play.svg" width="                                 30px" height="30px" alt="Play Media" />
+</button>  
+</div>
+<div class="card-control" name="control2"></div>
+</span>
+<br>
+<span>
+<div class="card-control" name="control3" ></div>
+<div class="card-control" name="control4" >
+    <a name="download" href="./media/ac-gen_Overview.mp3" class="mb-2" data-action-type="download"  title="Download AC Generator Introduction &amp; Overview" download>
+    <img class="card-img"  src="images/download.svg" alt="Download Media" />
+    </a>  
+</div>
+    <div class="card-control" name="control5" ></div>
+</span>
+    </div>
+    <audio preload="metadata"  src="./media/ac-gen_Overview.mp3"></audio>
+
+</div>
+<div class="card-status">
+    <label class="card-status1" name="status1">14:17 </label>
+    <br>
+    <label class="card-status2" name="status2">Pending..</label>
+</div>
+</div>
+</div>
+            
+                <div name="track"  class="card"  data-card-title="How to Download the Generator and perform initial setup""   data-card-category="General"  >
+    <div class="card-flex">
+    <div class="card-desc">
+<h2 id="how-to-download-the-generator-" >How to Download the Generator and perform initial setup  </h2>
+<button class="share-button">
+    <img src="images/share.svg" alt="Share link to this track" class="share-svg"/>
+</button>
+
+<p 'ta-justify'>Walkthrough download the Audio Catalog Generator multiple ways. Using Git (my favorite), as a zip file. There is also GitHub Desktop as an option.</p><p>Then tell you to do initial setup "npm install" at the server folder. Then you are ready to run it "npm run start".</p> 
+</div>
+<div  name="controls" class="card-controls " data-card-file="ACGenerator_Download_Initial+_Setup_.mp3" >
+<div  class="control-panel">
+    <span>
+    <div class="card-control" name="control0" ></div>
+    <div class="card-control" name="control1" >
+    <button name="play"  class="card-button mt-2"data-action-type="play" title="Play How to Download the Generator and perform initial setup">
+<img class="card-img"  src="images/play.svg" width="                                 30px" height="30px" alt="Play Media" />
+</button>  
+</div>
+<div class="card-control" name="control2"></div>
+</span>
+<br>
+<span>
+<div class="card-control" name="control3" ></div>
+<div class="card-control" name="control4" >
+    <a name="download" href="./media/ACGenerator_Download_Initial+_Setup_.mp3" class="mb-2" data-action-type="download"  title="Download How to Download the Generator and perform initial setup" download>
+    <img class="card-img"  src="images/download.svg" alt="Download Media" />
+    </a>  
+</div>
+    <div class="card-control" name="control5" ></div>
+</span>
+    </div>
+    <audio preload="metadata"  src="./media/ACGenerator_Download_Initial+_Setup_.mp3"></audio>
+
+</div>
+<div class="card-status">
+    <label class="card-status1" name="status1">11:00 </label>
+    <br>
+    <label class="card-status2" name="status2">Pending..</label>
+</div>
+</div>
+</div>
+            
+                <div name="track"  class="card"  data-card-title="Folder Layout of repository/generator""   data-card-category="General"  >
+    <div class="card-flex">
+    <div class="card-desc">
+<h2 id="folder-layout-of-repository/ge" >Folder Layout of repository/generator  </h2>
+<button class="share-button">
+    <img src="images/share.svg" alt="Share link to this track" class="share-svg"/>
+</button>
+
+<p 'ta-justify'>I walkthrough the folder layout of the Repository/ Generator. I tell you what to not touch and what you can delete if desired. Also inform youu where the folder is that you will find your Audio Catalog. You simply copy client/Public folder to anywhere you want the static site for your Audio Catalog.</p> 
+</div>
+<div  name="controls" class="card-controls " data-card-file="AC-gen_Folders.mp3" >
+<div  class="control-panel">
+    <span>
+    <div class="card-control" name="control0" ></div>
+    <div class="card-control" name="control1" >
+    <button name="play"  class="card-button mt-2"data-action-type="play" title="Play Folder Layout of repository/generator">
+<img class="card-img"  src="images/play.svg" width="                                 30px" height="30px" alt="Play Media" />
+</button>  
+</div>
+<div class="card-control" name="control2"></div>
+</span>
+<br>
+<span>
+<div class="card-control" name="control3" ></div>
+<div class="card-control" name="control4" >
+    <a name="download" href="./media/AC-gen_Folders.mp3" class="mb-2" data-action-type="download"  title="Download Folder Layout of repository/generator" download>
+    <img class="card-img"  src="images/download.svg" alt="Download Media" />
+    </a>  
+</div>
+    <div class="card-control" name="control5" ></div>
+</span>
+    </div>
+    <audio preload="metadata"  src="./media/AC-gen_Folders.mp3"></audio>
+
+</div>
+<div class="card-status">
+    <label class="card-status1" name="status1">10:20 </label>
+    <br>
+    <label class="card-status2" name="status2">Pending..</label>
+</div>
+</div>
+</div>
+            
+                <div name="track"  class="card"  data-card-title="Adding Media and filling template files""   data-card-category="General"  >
+    <div class="card-flex">
+    <div class="card-desc">
+<h2 id="adding-media-and-filling-templ" >Adding Media and filling template files  </h2>
+<button class="share-button">
+    <img src="images/share.svg" alt="Share link to this track" class="share-svg"/>
+</button>
+
+<p 'ta-justify'>Walkthrough: Run the template step to generate folder and catalog template descriptor files.  Add media to the media folder created. Rerun the template step to create one media descriptor file for each media file (named the same with txt extenson). Then you fill out all template descriptor files.</p><p>These files will generate the Audio Catalog for you and appear on the catalog.</p> 
+</div>
+<div  name="controls" class="card-controls " data-card-file="Adding media and creating templates.mp3" >
+<div  class="control-panel">
+    <span>
+    <div class="card-control" name="control0" ></div>
+    <div class="card-control" name="control1" >
+    <button name="play"  class="card-button mt-2"data-action-type="play" title="Play Adding Media and filling template files">
+<img class="card-img"  src="images/play.svg" width="                                 30px" height="30px" alt="Play Media" />
+</button>  
+</div>
+<div class="card-control" name="control2"></div>
+</span>
+<br>
+<span>
+<div class="card-control" name="control3" ></div>
+<div class="card-control" name="control4" >
+    <a name="download" href="./media/Adding media and creating templates.mp3" class="mb-2" data-action-type="download"  title="Download Adding Media and filling template files" download>
+    <img class="card-img"  src="images/download.svg" alt="Download Media" />
+    </a>  
+</div>
+    <div class="card-control" name="control5" ></div>
+</span>
+    </div>
+    <audio preload="metadata"  src="./media/Adding media and creating templates.mp3"></audio>
+
+</div>
+<div class="card-status">
+    <label class="card-status1" name="status1">16:57 </label>
+    <br>
+    <label class="card-status2" name="status2">Pending..</label>
+</div>
+</div>
+</div>
+            
+                <div name="track"  class="card"  data-card-title="Generating HTML for your Audio Catalog""   data-card-category="General"  >
+    <div class="card-flex">
+    <div class="card-desc">
+<h2 id="generating-html-for-your-audio" >Generating HTML for your Audio Catalog  </h2>
+<button class="share-button">
+    <img src="images/share.svg" alt="Share link to this track" class="share-svg"/>
+</button>
+
+<p 'ta-justify'>Walkthrough on generating the HTML for the Audio Catalog. You will be able to preview it before you commit this catalog. Safty would not want you to accidentally replace a good audio catalog.</p><p>Then I demonstrate copying the public folder into myvsCode Repository and rename the folder to docs off the root folder of the repository. You could just copy this folder anywhere and be done, but if you are suing GitHub and Git system, you want these extera instructions. ("Git add .", "Git status", "git commit -m"commit message"", "git push").</p> 
+</div>
+<div  name="controls" class="card-controls " data-card-file="Making HTML and publishing.mp3" >
+<div  class="control-panel">
+    <span>
+    <div class="card-control" name="control0" ></div>
+    <div class="card-control" name="control1" >
+    <button name="play"  class="card-button mt-2"data-action-type="play" title="Play Generating HTML for your Audio Catalog">
+<img class="card-img"  src="images/play.svg" width="                                 30px" height="30px" alt="Play Media" />
+</button>  
+</div>
+<div class="card-control" name="control2"></div>
+</span>
+<br>
+<span>
+<div class="card-control" name="control3" ></div>
+<div class="card-control" name="control4" >
+    <a name="download" href="./media/Making HTML and publishing.mp3" class="mb-2" data-action-type="download"  title="Download Generating HTML for your Audio Catalog" download>
+    <img class="card-img"  src="images/download.svg" alt="Download Media" />
+    </a>  
+</div>
+    <div class="card-control" name="control5" ></div>
+</span>
+    </div>
+    <audio preload="metadata"  src="./media/Making HTML and publishing.mp3"></audio>
+
+</div>
+<div class="card-status">
+    <label class="card-status1" name="status1">14:46 </label>
+    <br>
+    <label class="card-status2" name="status2">Pending..</label>
+</div>
+</div>
+</div>
+            
+                <div name="track"  class="card"  data-card-title="Easy editing and adding media""   data-card-category="General"  >
+    <div class="card-flex">
+    <div class="card-desc">
+<h2 id="easy-editing-and-adding-media" >Easy editing and adding media  </h2>
+<button class="share-button">
+    <img src="images/share.svg" alt="Share link to this track" class="share-svg"/>
+</button>
+
+<p 'ta-justify'>Walkthrough on how easy it is to add and modify existing html cards in your Audio Catalog Generator. What is the practical steps. I update it after generating using Git and GetHub hosting. You can simply copy the public folder to anywhere you desire.</p> 
+</div>
+<div  name="controls" class="card-controls " data-card-file="Easy adding Updating.mp3" >
+<div  class="control-panel">
+    <span>
+    <div class="card-control" name="control0" ></div>
+    <div class="card-control" name="control1" >
+    <button name="play"  class="card-button mt-2"data-action-type="play" title="Play Easy editing and adding media">
+<img class="card-img"  src="images/play.svg" width="                                 30px" height="30px" alt="Play Media" />
+</button>  
+</div>
+<div class="card-control" name="control2"></div>
+</span>
+<br>
+<span>
+<div class="card-control" name="control3" ></div>
+<div class="card-control" name="control4" >
+    <a name="download" href="./media/Easy adding Updating.mp3" class="mb-2" data-action-type="download"  title="Download Easy editing and adding media" download>
+    <img class="card-img"  src="images/download.svg" alt="Download Media" />
+    </a>  
+</div>
+    <div class="card-control" name="control5" ></div>
+</span>
+    </div>
+    <audio preload="metadata"  src="./media/Easy adding Updating.mp3"></audio>
+
+</div>
+<div class="card-status">
+    <label class="card-status1" name="status1">25:01 </label>
+    <br>
+    <label class="card-status2" name="status2">Pending..</label>
+</div>
+</div>
+</div>
+            
+                <div name="track"  class="card"  data-card-title="Crating a Repository on GitHub""   data-card-category="General"  >
+    <div class="card-flex">
+    <div class="card-desc">
+<h2 id="crating-a-repository-on-github" >Crating a Repository on GitHub  </h2>
+<button class="share-button">
+    <img src="images/share.svg" alt="Share link to this track" class="share-svg"/>
+</button>
+
+<p 'ta-justify'>Walkthroug to creating a Repository that will house your own Audio Catalog. You will need to have a GitHub account and be logged in. The basic address ig <a href="http://github.com/new">GitHub.com/new</a>. Only requirement is that it must be public, unless you have a professional account. Fill descript and include a readme if descired. Repository will display the readme file for the repository if present. Otherwise, description wil be sued. This has no impact on your Audio catalog for repos readme.</p> 
+</div>
+<div  name="controls" class="card-controls " data-card-file="Creating_a_GitHub_Repository.mp3" >
+<div  class="control-panel">
+    <span>
+    <div class="card-control" name="control0" ></div>
+    <div class="card-control" name="control1" >
+    <button name="play"  class="card-button mt-2"data-action-type="play" title="Play Crating a Repository on GitHub">
+<img class="card-img"  src="images/play.svg" width="                                 30px" height="30px" alt="Play Media" />
+</button>  
+</div>
+<div class="card-control" name="control2"></div>
+</span>
+<br>
+<span>
+<div class="card-control" name="control3" ></div>
+<div class="card-control" name="control4" >
+    <a name="download" href="./media/Creating_a_GitHub_Repository.mp3" class="mb-2" data-action-type="download"  title="Download Crating a Repository on GitHub" download>
+    <img class="card-img"  src="images/download.svg" alt="Download Media" />
+    </a>  
+</div>
+    <div class="card-control" name="control5" ></div>
+</span>
+    </div>
+    <audio preload="metadata"  src="./media/Creating_a_GitHub_Repository.mp3"></audio>
+
+</div>
+<div class="card-status">
+    <label class="card-status1" name="status1">8:19 </label>
+    <br>
+    <label class="card-status2" name="status2">Pending..</label>
+</div>
+</div>
+</div>
+            
+            <div class="post">
+                <br>
+<p 'ta-justify'><h5>Resources</h5></p><p><a href="https://nodejs.org/en/download">NodeJs Dowload</a></p><p><a href="https://git-scm.com/download/win">Git Download for Windows</a>.  Note Linux, WSL, have Git already installed. If visually impaired and you install this one, be sure you do not check wsl or Linux integration, and do not enable gui.</p><p>Article on how to configure <a href="https://blindheroes.org/websites/wordpress/ssh/">SSH and GitHub</a> for easy uploads and secure.</p><p><a href="https://desktop.github.com/">GitHub Desktop </a> for those that want a full featured GUI and not a command line interface. This is easier and does not require a lot of SSH key generation.</p>
+            </div>
+            
+        
+        
+
+    </DIV >
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4">
+        <p class="col-md-4 mb-0 text-muted">&copy; 2021 Simple Blog</p>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li class="nav-item"><a href="/" class="nav-link px-2">Home</a></li>
+            <li class="nav-item"><a href="/articles" class="nav-link px-2">Articles</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2">About</a></li>
+        </ul>
+        <h5>Powered by Lewis Wood</h5>
+    </footer>
+</div>
+</div>
+
+
+</div>
+<!-- End of content area  -->
+<div id="dlgBack"  class="hide" aria-hidden=""true"">
+ <div id="dlgModal" class="dlg" >
+     <div class="player-status ">
+     <div id="helpLive" aria-live="assertive" ></div>
+ </div>
+       <h1 id="dlgHeader">Player Shortcut KeysHeader</h1>
+       <br>
+       <table>
+<thead>
+    <caption>Table for Shortcut keys</caption>
+ <tr>
+     <th>Shortcut Key</th>
+     <th>Action Performed</th>
+ </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>shift + ?</td>
+        <td>Displays this help screen.</td>
+    </tr>
+ <tr>
+     <td>k</td>
+     <td>Play/Pause current track.</td>
+ </tr>
+ <tr>
+     <td>j</td>
+     <td>Rewind 15 seconds current track.</td>
+ </tr>
+ <tr>
+     <td>l</td>
+     <td>Fast foward 15 seconds current track.</td>
+ </tr>
+ <tr>
+     <td>shift + p</td>
+     <td>Switch to previous track.</td>
+ </tr>
+ <tr>
+     <td>shift + n</td>
+     <td>Switch to next track.</td>
+ </tr>
+ <tr>
+     <td><(less than)</td>
+     <td>Reduce playback rate..</td>
+ </tr>
+ <tr>
+     <td>> (greater than)</td>
+     <td>Increase playback rate..</td>
+ </tr>
+ <tr>
+     <td>v</td>
+     <td>Increase volume..</td>
+ </tr>
+ <tr>
+     <td>shift + v</td>
+     <td>Decrease volume..</td>
+ </tr>
+ <tr>
+     <td>m</td>
+     <td>Mute player..</td>
+ </tr>
+ <tr>
+     <td>0 through 9</td>
+     <td>Go to % of playback. ie 5 = 50% & 7  70%</td>
+ </tr>
+</tbody>
+       </table>
+
+       <br>
+       <div class="player-status ">
+         Press letter "s" to have the player say the current status of the player.
+
+         When you are using a screen reader you will need to turn off screedn reader keys in order to use any of the above keys. 
+         </div>  
+
+       <button id="closeHelpScreen" >exit</button>
+       <p>Press escape key to exit or the above button.</p>
+       <p>*** Note: I tried to stay close to YouTube shortcut keys. People and especially visually impaired have enough keys to remember</p>
+
+ </div>
+
+</div>
+
+</body>
+<!-- <script src="./js/devops.js"></script></script> -->
+<script src="./js/index.js"></script></script>
+</html>

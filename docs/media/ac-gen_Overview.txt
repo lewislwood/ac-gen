@@ -1,0 +1,12 @@
+# Media Info file.  This file describes the media with the same name. 
+# You must copy this template file into media folder and name it the same name as the media file with the .txt extension.
+# Media friendly name
+[name]=AC Generator Introduction & Overview
+# Custom anchor tag, otherwise one will be genrated from name above.  This way when you share a direct link to this media it has your custom tag (perhaps shorter and more meaningful.
+[anchor]=acGenOverview
+[order]=11
+[category]=General
+[length]=14:17
+# *****  Ends the tag info section ***
+This audio will describe in detail how to play the Audio Catalog Player. Discusses using it without screen reader keys and the benefits. Talks how to access it with screen reader navigation keys turned on. Discusses playing media faster/slower. How blind get Player Status on demand the same as visual people get when they look at the screen. Very Accessible to visually impair/blind and pleasant to the sighted. 
+Customizable for colors and icons/ logo. So start generating your own catalog today.
