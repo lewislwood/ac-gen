@@ -1,7 +1,7 @@
 {
   "application": {
     "name": "Audio-Catalog",
-    "created": "2023-04-12T18:25:58.366Z",
+    "created": "2023-04-12T20:00:31.843Z",
     "developer": "Lewis Wood",
     "website": "http://blindheroes.org"
   },
@@ -95,6 +95,18 @@
       "category": "General",
       "description": "<p 'ta-justify'>Walkthroug to creating a Repository that will house your own Audio Catalog. You will need to have a GitHub account and be logged in. The basic address ig <a href=\"http://github.com/new\">GitHub.com/new</a>. Only requirement is that it must be public, unless you have a professional account. Fill descript and include a readme if descired. Repository will display the readme file for the repository if present. Otherwise, description wil be sued. This has no impact on your Audio catalog for repos readme.</p>",
       "anchor": "crating-a-repository-on-github"
+    },
+    {
+      "file": "Turning on GH Pages.mp3",
+      "name": "Enabling GitHub Pages",
+      "length": "13:45",
+      "type": "mp3",
+      "size": 14948727,
+      "Modified": "2023-04-12T19:45:37.225Z",
+      "order": 22,
+      "category": "General",
+      "description": "<p 'ta-justify'>When you finally have the Audio Catalog Generated and placed in the local version of the repository. It is now to enable GitHub Pages. Now if you are uploading files to your repository via some other means, then all you need do is enable the GitHub Pages. You could skip the 1st 2 minutes where I push the audio catalog up to the repository on GitHub.</p>",
+      "anchor": "enabling-github-pages"
     }
   ],
   "doc_title": "Audio Catalog Generator",

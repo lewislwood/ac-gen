@@ -1,0 +1,12 @@
+# Media Info file.  This file describes the media with the same name. 
+# You must copy this template file into media folder and name it the same name as the media file with the .txt extension.
+# Media friendly name
+[name]=Enabling GitHub Pages
+# Custom anchor tag, otherwise one will be genrated from name above.  This way when you share a direct link to this media it has your custom tag (perhaps shorter and more meaningful.
+[anchor]=acGenEnableGitHubPages
+[order]=22
+[category]=General
+[length]=13:45
+# *****  Ends the tag info section ***
+# This is the media description. Each new line will become a paragraph.
+When you finally have the Audio Catalog Generated and placed in the local version of the repository. It is now to enable GitHub Pages. Now if you are uploading files to your repository via some other means, then all you need do is enable the GitHub Pages. You could skip the 1st 2 minutes where I push the audio catalog up to the repository on GitHub.
